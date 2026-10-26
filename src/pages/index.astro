@@ -1,50 +1,136 @@
 ---
 import '../styles/global.css';
 const ideas = [
-  { n: '01', title: 'Líneas contemporáneas', type: 'DISEÑO · FACHADA', img: 'photo-1600585154340-be6161a56a0c', alt: 'Casa contemporánea de líneas limpias' },
-  { n: '02', title: 'Luz que transforma', type: 'INTERIOR · CALMA', img: 'photo-1600607687939-ce8a6c25118c', alt: 'Interior moderno con materiales naturales' },
-  { n: '03', title: 'Tu espacio exterior', type: 'TERRAZA · NATURALEZA', img: 'photo-1600566753086-00f18fb6b3ea', alt: 'Terraza de casa moderna' }
+  { n: '01', title: 'Una casa compacta', type: 'IDEA · ESPACIO ESENCIAL', img: 'https://minvivienda.gov.co/sites/default/files/noticias/072a2047-1.jpg', alt: 'Vivienda prefabricada sencilla de un piso sobre un terreno de tierra', kind: 'compacta' },
+  { n: '02', title: 'Un hogar familiar', type: 'IDEA · ESPACIOS PARA COMPARTIR', img: 'https://2.bp.blogspot.com/-Zt2r9upAfbY/VNO1TzPrs3I/AAAAAAAAAJs/Ut7mTNxEWBg/s1600/49m2%287x7%29.JPG', alt: 'Casa de apariencia sencilla con cubierta liviana y espacio exterior', kind: 'familiar' },
+  { n: '03', title: 'Pensar a futuro', type: 'IDEA · CRECER CON EL TIEMPO', img: 'https://www.sucasaprefabricada.com/wp-content/uploads/2016/01/Casa-36.jpg', alt: 'Casa prefabricada de paneles, con estructura y cubierta simples', kind: 'etapas' }
 ];
 ---
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Diseñemos una casa prefabricada contemporánea para tu terreno en Vergara, Cundinamarca." />
-<meta name="theme-color" content="#202a24" /><title>Casas Prefabricadas Vergara | Diseño para vivir a tu manera</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Explora ideas de casas prefabricadas sencillas para terrenos en Vergara, Cundinamarca. Consulta opciones y condiciones de tu proyecto." />
+<meta name="theme-color" content="#25382f" />
+<title>Casas Prefabricadas Vergara | Una casa a tu manera</title>
 </head>
 <body>
 <header class="topbar">
-<a class="brand" href="#inicio"><span class="mark">V.</span><span><b>CASAS PREFABRICADAS</b><small>VERGARA · CUNDINAMARCA</small></span></a>
-<nav aria-label="Navegación principal"><a href="#concepto">Concepto</a><a href="#modelos">Inspiración</a><a class="nav-cta" href="#contacto">Hablemos ↗</a></nav>
+  <a class="brand" href="#inicio" aria-label="Casas Prefabricadas Vergara, inicio">
+    <span class="mark">CV</span>
+    <span><b>CASAS PREFABRICADAS</b><small>VERGARA · CUNDINAMARCA</small></span>
+  </a>
+  <nav aria-label="Navegación principal">
+    <a href="#ideas">Ideas de casa</a><a href="#como-funciona">Cómo empezar</a><a class="nav-cta" href="#contacto">Consultar ↗</a>
+  </nav>
 </header>
 <main>
 <section class="hero" id="inicio">
-<div class="hero-image" id="heroImage" role="img" aria-label="Casa contemporánea de arquitectura minimalista"></div><div class="hero-shade"></div>
-<div class="hero-copy"><p class="eyebrow"><i></i> ARQUITECTURA · DISEÑO · VIDA</p><h1>Menos ruido.<br><em>Más espacio para vivir.</em></h1><p class="lead">Casas de líneas limpias, materiales cálidos y espacios pensados para tu forma de vivir. Tu idea empieza aquí.</p><div class="actions"><a class="button light" href="#modelos">Explorar diseños ↘</a><a class="text-link" href="#contacto">Hablemos de tu terreno ↗</a></div></div>
-<div class="hero-meta"><span><i></i> VERGARA, CUNDINAMARCA</span><span>01 — DISEÑO CONTEMPORÁNEO</span></div>
-<div class="hero-tools"><span>EXPLORA LA FACHADA</span><button type="button" id="zoomOut" aria-label="Alejar imagen">−</button><input id="zoomRange" type="range" min="100" max="125" value="100" aria-label="Zoom de la fachada"><button type="button" id="zoomIn" aria-label="Acercar imagen">+</button></div>
+  <div class="hero-image" id="heroImage" role="img" aria-label="Ejemplo de una casa prefabricada sencilla en un lote de tierra"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-copy">
+    <p class="eyebrow"><i></i> VIVIENDA PREFABRICADA · VERGARA</p>
+    <h1>Una casa propia.<br><em>Con los pies en la tierra.</em></h1>
+    <p class="lead">Ideas de vivienda sencillas y funcionales para terrenos reales. Sin imaginar acabados de lujo: empecemos por el espacio, lo que necesitas y lo que puedes construir.</p>
+    <div class="actions"><a class="button light" href="#ideas">Explorar ideas <span>↘</span></a><a class="text-link" href="#contacto">Consultar por mi terreno ↗</a></div>
+  </div>
+  <div class="hero-stamp"><span class="stamp-dot"></span><span>REFERENCIA VISUAL</span><small>Casa sencilla · Lote sin pavimentar</small></div>
+  <div class="hero-meta"><span><i></i> VERGARA Y ALREDEDORES</span><span>DISEÑO PRÁCTICO · SIN COMPLICACIONES</span></div>
+  <div class="hero-tools"><span>ACÉRCATE A LA FOTO</span><button type="button" id="zoomOut" aria-label="Alejar imagen">−</button><input id="zoomRange" type="range" min="100" max="125" value="100" aria-label="Acercar o alejar la foto"><button type="button" id="zoomIn" aria-label="Acercar imagen">+</button></div>
 </section>
-<section class="manifesto section" id="concepto"><div class="section-kicker">01 <i></i> EL CONCEPTO</div><div><p class="eyebrow dark">UNA NUEVA FORMA DE HABITAR</p><h2>Diseño actual.<br><em>Vida a tu manera.</em></h2></div><div class="manifesto-copy"><p>No hace falta elegir entre una casa funcional y un espacio con personalidad. Imaginamos hogares contemporáneos, cálidos y conectados con el entorno.</p><a class="underline" href="#contacto">Conversemos sobre tu proyecto ↗</a></div></section>
-<section class="feature section"><div class="feature-photo"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80" alt="Sala contemporánea iluminada con materiales naturales" loading="lazy"><span>ESPACIOS QUE SE SIENTEN</span></div><div class="feature-copy"><p class="eyebrow dark">01 / INTENCIÓN</p><h2>La diferencia está<br>en <em>cómo se vive.</em></h2><p>La luz, la distribución y la relación con el exterior pueden cambiar la experiencia de un hogar. Partimos de esas ideas para explorar posibilidades contigo.</p><strong>Tu terreno. Tu estilo. Tu proyecto.</strong></div></section>
-<section class="models section" id="modelos"><div class="section-heading"><div><p class="eyebrow dark">UNA GALERÍA PARA IMAGINAR</p><h2>¿Qué estilo va <em>contigo?</em></h2></div><p>Explora referencias visuales y elige las ideas que te gustaría llevar a tu proyecto.</p></div>
-<div class="model-grid">{ideas.map((idea) => <article class="model-card"><button class="model-visual" type="button" data-image={'https://images.unsplash.com/' + idea.img + '?auto=format&fit=crop&w=1400&q=85'} data-title={idea.title} data-alt={idea.alt} aria-label={'Ampliar imagen: ' + idea.title}><img src={'https://images.unsplash.com/' + idea.img + '?auto=format&fit=crop&w=900&q=80'} alt={idea.alt} loading="lazy"><span class="model-number">{idea.n}</span><span class="zoom-cue">VER DETALLE ↗</span></button><div class="model-caption"><div><small>{idea.type}</small><h3>{idea.title}</h3></div><span>↗</span></div></article>)}</div>
-<p class="disclaimer">Imágenes de referencia e inspiración; no representan necesariamente modelos disponibles. Materiales, especificaciones, precios y tiempos deben confirmarse con el equipo.</p></section>
-<section class="process section"><div class="section-kicker">02 <i></i> EL PUNTO DE PARTIDA</div><div class="process-grid"><h2>Una buena idea<br>merece <em>tomar forma.</em></h2><div class="process-steps"><article><span>01</span><div><h3>Cuéntanos tu idea</h3><p>Qué tipo de casa imaginas y qué es importante para ti.</p></div></article><article><span>02</span><div><h3>Hablemos del terreno</h3><p>Ubicación, espacio y condiciones para explorar opciones.</p></div></article><article><span>03</span><div><h3>Revisemos posibilidades</h3><p>Conversemos sobre alternativas y siguientes pasos.</p></div></article></div></div></section>
-<section class="contact section" id="contacto"><div><p class="eyebrow"><i></i> TODO EMPIEZA CON UNA CONVERSACIÓN</p><h2>Imagina el espacio.<br><em>Hagamos el plan.</em></h2><p>Cuéntanos dónde quieres construir y qué tienes en mente. El primer paso es conversar.</p></div><div class="contact-card"><small>TU PROYECTO · 01</small><h3>Hablemos de tu próxima casa.</h3><p>Escríbenos por WhatsApp para compartir tu idea y resolver tus primeras preguntas.</p><a class="button dark-button" href="https://wa.me/573134843085?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Casas%20Prefabricadas%20Vergara%20y%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer">Iniciar conversación ↗</a><p class="contact-note">Número de contacto pendiente de confirmación antes de publicar oficialmente.</p></div></section>
+
+<section class="intro section" id="concepto">
+  <div class="section-kicker">01 <i></i> LA IDEA</div>
+  <div class="intro-heading"><p class="eyebrow dark">LO IMPORTANTE ES QUE FUNCIONE</p><h2>Un espacio para vivir.<br><em>Sin adornos innecesarios.</em></h2></div>
+  <div class="intro-copy"><p>No todas las casas tienen que parecer una revista de arquitectura. Una buena solución empieza por entender el lote, la distribución, los materiales y las necesidades de quienes van a vivir ahí.</p><a class="underline" href="#como-funciona">Miremos cómo empezar ↗</a></div>
+</section>
+
+<section class="reality section">
+  <div class="reality-photo"><img src="https://arquicasas.co/wp-content/uploads/2022/08/TOCOTA-05-48-MT2.jpg" alt="Casa prefabricada blanca, sencilla, construida sobre un terreno de tierra" loading="lazy"><span class="photo-label">LOTE REAL · REFERENCIA ILUSTRATIVA</span></div>
+  <div class="reality-copy"><p class="eyebrow dark">CASAS PENSADAS PARA EL DÍA A DÍA</p><h2>Primero lo esencial.<br><em>Después, los detalles.</em></h2><p>El terreno puede ser destapado, tener una pendiente o necesitar preparación. Por eso conviene conversar sobre el acceso, la base de la casa, el agua, la energía y los acabados antes de asumir qué incluye una cotización.</p>
+    <div class="reality-points"><div><span>01</span><p><b>Distribución práctica</b><small>Espacios que respondan a tu rutina.</small></p></div><div><span>02</span><p><b>Condiciones del lote</b><small>Revisar el terreno antes de elegir.</small></p></div><div><span>03</span><p><b>Alcance claro</b><small>Confirmar qué está incluido y qué no.</small></p></div></div>
+  </div>
+</section>
+
+<section class="explorer section" id="explorar">
+  <div class="section-heading"><div><p class="eyebrow dark">UN EXPLORADOR SENCILLO</p><h2>¿Qué tipo de casa<br><em>tienes en mente?</em></h2></div><p>Elige la idea que más se acerca a lo que buscas. Es una guía inicial, no una cotización ni una promesa de disponibilidad.</p></div>
+  <div class="explorer-layout">
+    <div class="choice-list" role="group" aria-label="Tipo de vivienda que imaginas">
+      <button type="button" class="choice active" data-choice="compacta" aria-pressed="true"><span>01</span><b>Algo compacto</b><i>↗</i></button>
+      <button type="button" class="choice" data-choice="familiar" aria-pressed="false"><span>02</span><b>Para mi familia</b><i>↗</i></button>
+      <button type="button" class="choice" data-choice="etapas" aria-pressed="false"><span>03</span><b>Construir por etapas</b><i>↗</i></button>
+    </div>
+    <div class="choice-detail" aria-live="polite">
+      <div class="choice-number" id="choiceNumber">01 / TU IDEA</div>
+      <h3 id="choiceTitle">Empezar por lo esencial.</h3>
+      <p id="choiceText">Una distribución sencilla, fácil de entender y de mantener. Primero revisemos cuántas personas vivirán allí y qué espacios son indispensables.</p>
+      <div class="detail-line"><span>LO SIGUIENTE</span><b id="choiceNext">Definir espacios y servicios básicos</b></div>
+      <a class="underline" href="#contacto">Conversar sobre esta idea ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="models section" id="ideas">
+  <div class="section-heading"><div><p class="eyebrow dark">GALERÍA DE REFERENCIAS</p><h2>Casas sencillas.<br><em>Ideas reales.</em></h2></div><p>Usa estas imágenes para conversar sobre fachadas, espacios y acabados. No representan un catálogo oficial.</p></div>
+  <div class="model-grid">{ideas.map((idea) => <article class="model-card"><button class="model-visual" type="button" data-image={idea.img} data-title={idea.title} data-alt={idea.alt} aria-label={'Ampliar imagen: ' + idea.title}><img src={idea.img} alt={idea.alt} loading="lazy"><span class="model-number">{idea.n}</span><span class="zoom-cue">VER FOTO ↗</span></button><div class="model-caption"><div><small>{idea.type}</small><h3>{idea.title}</h3></div><a href="#contacto" aria-label={'Consultar sobre ' + idea.title}>↗</a></div></article>)}</div>
+  <p class="disclaimer">Fotos externas usadas solo como referencia visual. Las casas, materiales, dimensiones, precios, transporte, adecuación del terreno e instalación deben verificarse con el proveedor antes de tomar una decisión.</p>
+</section>
+
+<section class="process section" id="como-funciona">
+  <div class="section-kicker">02 <i></i> CÓMO EMPEZAR</div>
+  <div class="process-grid"><div><p class="eyebrow dark">SIN COMPLICAR EL PRIMER PASO</p><h2>Hablemos claro<br><em>desde el comienzo.</em></h2><p class="process-intro">La idea es entender qué necesitas y qué condiciones tiene el lugar antes de hablar de opciones concretas.</p></div><div class="process-steps">
+    <article><span>01</span><div><h3>Cuéntanos dónde queda el lote</h3><p>Municipio, acceso y si el terreno es plano o tiene pendiente.</p></div></article>
+    <article><span>02</span><div><h3>Definamos qué necesitas</h3><p>Tamaño aproximado, habitaciones y espacios indispensables.</p></div></article>
+    <article><span>03</span><div><h3>Revisemos qué incluye</h3><p>Materiales, base, montaje, transporte, servicios y acabados por separado.</p></div></article>
+  </div></div>
+</section>
+
+<section class="contact section" id="contacto">
+  <div><p class="eyebrow"><i></i> TU IDEA PUEDE EMPEZAR CON UNA PREGUNTA</p><h2>¿Tienes un lote?<br><em>Hablemos de tu casa.</em></h2><p>Comparte dónde quieres construir y qué tipo de vivienda estás imaginando. De ahí podemos revisar cuál sería el siguiente paso.</p></div>
+  <div class="contact-card"><small>CASAS PREFABRICADAS · VERGARA</small><h3>Cuéntanos tu idea.</h3><p>Escríbenos para consultar opciones y las condiciones que deben revisarse en tu terreno.</p><a class="button dark-button" href="https://wa.me/573134843085?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Casas%20Prefabricadas%20Vergara%20y%20quiero%20consultar%20por%20una%20casa." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <span>↗</span></a><p class="contact-note">Importante: confirmar el número de WhatsApp antes de publicar la página oficialmente.</p></div>
+</section>
 </main>
-<footer><a class="brand" href="#inicio"><span class="mark">V.</span><span><b>CASAS PREFABRICADAS</b><small>VERGARA · CUNDINAMARCA</small></span></a><span>Diseño para imaginar nuevas formas de vivir.</span><small>© {new Date().getFullYear()} · Sitio demostrativo</small></footer>
+<footer><a class="brand" href="#inicio"><span class="mark">CV</span><span><b>CASAS PREFABRICADAS</b><small>VERGARA · CUNDINAMARCA</small></span></a><span>Una vivienda pensada para la vida real.</span><small>© {new Date().getFullYear()} · Página demostrativa</small></footer>
 <dialog id="imageDialog" class="image-dialog"><button type="button" class="dialog-close" id="dialogClose" aria-label="Cerrar imagen">×</button><img id="dialogImage" src="" alt=""><p id="dialogTitle"></p></dialog>
 <script>
-const hero=document.querySelector('#heroImage'),range=document.querySelector('#zoomRange');
+const hero=document.querySelector('#heroImage');
+const range=document.querySelector('#zoomRange');
 const setZoom=(v)=>{range.value=Math.min(125,Math.max(100,Number(v)));hero.style.setProperty('--zoom',Number(range.value)/100)};
 range.addEventListener('input',()=>setZoom(range.value));
 document.querySelector('#zoomIn').addEventListener('click',()=>setZoom(Number(range.value)+5));
 document.querySelector('#zoomOut').addEventListener('click',()=>setZoom(Number(range.value)-5));
-const dialog=document.querySelector('#imageDialog'),dialogImage=document.querySelector('#dialogImage');
-document.querySelectorAll('.model-visual').forEach((b)=>b.addEventListener('click',()=>{dialogImage.src=b.dataset.image;dialogImage.alt=b.dataset.alt;document.querySelector('#dialogTitle').textContent=b.dataset.title;dialog.showModal()}));
+
+const options={
+  compacta:{number:'01 / TU IDEA',title:'Empezar por lo esencial.',text:'Una distribución sencilla, fácil de entender y de mantener. Primero revisemos cuántas personas vivirán allí y qué espacios son indispensables.',next:'Definir espacios y servicios básicos'},
+  familiar:{number:'02 / TU IDEA',title:'Un lugar para compartir.',text:'Pensemos en la rutina de la familia: habitaciones, cocina, baño y un espacio donde estar juntos. La distribución real dependerá del área y las opciones disponibles.',next:'Hacer una lista de espacios necesarios'},
+  etapas:{number:'03 / TU IDEA',title:'Planear con los pies en la tierra.',text:'Si quieres avanzar poco a poco, conviene preguntar qué se puede entregar inicialmente y qué debería quedar previsto desde el diseño. No todas las soluciones permiten ampliaciones posteriores.',next:'Consultar qué incluye cada etapa'}
+};
+document.querySelectorAll('.choice').forEach(button=>button.addEventListener('click',()=>{
+  const choice=options[button.dataset.choice];
+  document.querySelectorAll('.choice').forEach(item=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active))});
+  document.querySelector('#choiceNumber').textContent=choice.number;
+  document.querySelector('#choiceTitle').textContent=choice.title;
+  document.querySelector('#choiceText').textContent=choice.text;
+  document.querySelector('#choiceNext').textContent=choice.next;
+}));
+const dialog=document.querySelector('#imageDialog');
+const dialogImage=document.querySelector('#dialogImage');
+document.querySelectorAll('.model-visual').forEach(button=>button.addEventListener('click',()=>{
+  dialogImage.src=button.dataset.image;
+  dialogImage.alt=button.dataset.alt;
+  document.querySelector('#dialogTitle').textContent=button.dataset.title;
+  dialog.showModal();
+}));
 document.querySelector('#dialogClose').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',(e)=>{if(e.target===dialog)dialog.close()});
-if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){document.querySelector('.hero').addEventListener('pointermove',(e)=>{const r=e.currentTarget.getBoundingClientRect();hero.style.setProperty('--x',((e.clientX-r.left)/r.width-.5)*-9+'px');hero.style.setProperty('--y',((e.clientY-r.top)/r.height-.5)*-6+'px')})}
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+  document.querySelector('.hero').addEventListener('pointermove',event=>{
+    const box=event.currentTarget.getBoundingClientRect();
+    hero.style.setProperty('--x',((event.clientX-box.left)/box.width-.5)*-7+'px');
+    hero.style.setProperty('--y',((event.clientY-box.top)/box.height-.5)*-5+'px');
+  });
+}
 </script>
-</body></html>
+</body>
+</html>
