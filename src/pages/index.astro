@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+const ideas = [
+  { n: '01', title: 'Un refugio campestre', type: 'DESCANSO · NATURALEZA', img: 'photo-1449158743715-0a90ebb6d2d8', alt: 'Casa rodeada de naturaleza' },
+  { n: '02', title: 'Espacios para compartir', type: 'FAMILIA · BIENESTAR', img: 'photo-1600585154340-be6161a56a0c', alt: 'Casa moderna con jardín' },
+  { n: '03', title: 'Diseño cálido y natural', type: 'DISEÑO · INSPIRACIÓN', img: 'photo-1600607687939-ce8a6c25118c', alt: 'Interior de casa con tonos cálidos' }
+];
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Imaginemos juntos tu casa prefabricada en Vergara, Cundinamarca y municipios cercanos." />
+  <meta name="theme-color" content="#183d30" />
+  <title>Casas Prefabricadas Vergara | Tu vida más natural</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="mark">⌂</span><span><b>CASAS PREFABRICADAS</b><small>VERGARA · CUNDINAMARCA</small></span></a>
+    <nav><a href="#propuesta">La propuesta</a><a href="#inspiracion">Inspiración</a><a class="nav-cta" href="#contacto">Hablemos ↗</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-photo"></div><div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><i></i> TU IDEA · TU TERRENO · TU HOGAR</p>
+        <h1>Un lugar propio.<br><em>Una vida más natural.</em></h1>
+        <p class="lead">Imaginemos juntos una casa donde los días se viven sin afán, cerca de la naturaleza y a tu manera.</p>
+        <div class="actions"><a class="button light" href="#contacto">Hablemos de tu proyecto <span>↗</span></a><a class="simple-link" href="#inspiracion">Explorar ideas ↓</a></div>
+      </div>
+      <div class="location"><i></i><span>Vergara y municipios cercanos<br><b>Cundinamarca, Colombia</b></span></div><span class="index">01 / 03</span>
+    </section>
+    <section class="intro section" id="propuesta">
+      <aside class="side-label">01 <span></span> LA PROPUESTA</aside>
+      <div><p class="eyebrow dark">MÁS QUE UNA CASA</p><h2>El espacio para vivir<br>como <em>siempre imaginaste.</em></h2><p class="body-copy">Cada proyecto empieza con una idea: descansar, compartir en familia o tener un rincón propio fuera del ruido. Queremos ayudarte a convertir esa idea en un plan concreto.</p><a class="underline" href="#contacto">Cuéntanos qué tienes en mente ↗</a></div>
+      <div class="stamp"><small>HECHO PARA</small><b>disfrutar<br>lo esencial.</b><span>✳</span></div>
+    </section>
+    <section class="benefits section">
+      <article><span>⌂</span><h3>Pensadas para tu terreno</h3><p>Exploremos opciones que se adapten a tu espacio y a la forma en que quieres vivir.</p></article>
+      <article><span>✳</span><h3>Estilo a tu medida</h3><p>Desde un refugio sencillo hasta una casa campestre contemporánea.</p></article>
+      <article><span>↗</span><h3>Acompañamiento cercano</h3><p>Conversemos sobre tu idea, el lugar y los siguientes pasos.</p></article>
+    </section>
+    <section class="inspiration section" id="inspiracion">
+      <div class="section-heading"><div><p class="eyebrow dark">IDEAS PARA EMPEZAR</p><h2>Encuentra tu <em>inspiración.</em></h2></div><p>Una primera mirada a estilos y ambientes que podrían inspirar tu próximo proyecto.</p></div>
+      <div class="cards">{ideas.map((idea) => <article class="project"><div class="project-photo"><img src={`https://images.unsplash.com/${idea.img}?auto=format&fit=crop&w=1000&q=85`} alt={idea.alt} loading="lazy"><span>{idea.n}</span></div><div class="project-caption"><div><small>{idea.type}</small><h3>{idea.title}</h3></div><a href="#contacto" aria-label={`Consultar por ${idea.title}`}>↗</a></div></article>)}</div>
+      <p class="disclaimer">Imágenes de referencia para inspiración visual. Modelos, materiales, precios y tiempos deben confirmarse con el equipo.</p>
+    </section>
+    <section class="contact section" id="contacto"><div><p class="eyebrow"><i></i> EL PRIMER PASO ES UNA CONVERSACIÓN</p><h2>¿Y si empezamos<br>a <em>darle forma?</em></h2><p class="body-copy">Cuéntanos dónde quieres construir y cómo imaginas tu casa. Hablemos de tu idea y revisemos las opciones.</p></div><div class="contact-card"><small>HABLEMOS DE TU PROYECTO</small><h3>Tu próxima casa<br>empieza con una idea.</h3><p>Escríbenos por WhatsApp para conversar sobre tu proyecto.</p><a class="button green" href="https://wa.me/573134843085?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Casas%20Prefabricadas%20Vergara%20y%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer">Contactar por WhatsApp ↗</a><p class="notice">Número de contacto pendiente de confirmación antes de publicar oficialmente.</p></div></section>
+  </main>
+  <footer><a class="brand" href="#inicio"><span class="mark">⌂</span><span><b>CASAS PREFABRICADAS</b><small>VERGARA · CUNDINAMARCA</small></span></a><p>Un proyecto para imaginar, construir y disfrutar.</p><small>© {new Date().getFullYear()} · Sitio demostrativo</small></footer>
+</body>
+</html>
