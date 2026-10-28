@@ -1,130 +1,200 @@
 ---
 import '../styles/global.css';
 
-const slides = [
-  { image: 'https://arquicasas.co/wp-content/uploads/2022/08/TOCOTA-05-48-MT2.jpg', alt: 'Casa prefabricada de un piso con fachada clara y cubierta sencilla', eyebrow: 'UNA CASA PARA TU HISTORIA', title: 'Tu casa.<br><em>Tu forma de vivir.</em>', copy: 'Viviendas prefabricadas funcionales, con una presentación cuidada y opciones por explorar según tu terreno y tus necesidades.', caption: 'FACHADA · LUZ · ESPACIO' },
-  { image: 'https://images.homify.com/c_fill%2Cf_auto%2Ch_700%2Cq_auto/v1577039332/p/photo/image/3299737/FB_IMG_1559322079978.jpg', alt: 'Vivienda prefabricada clara con porche y espacio exterior', eyebrow: 'ESPACIOS SENCILLOS, BIEN PENSADOS', title: 'Lo esencial,<br><em>con más estilo.</em>', copy: 'Una fachada limpia, una entrada agradable y espacios que se adapten a la vida real. El buen diseño también está en los detalles.', caption: 'ENTRADA · PORCHE · ENTORNO' },
-  { image: 'https://www.casasprefabricadascolombia.com/images/modelos/14.jpg', alt: 'Casa prefabricada compacta con ventanas amplias y plantas exteriores', eyebrow: 'IDEAS PARA EMPEZAR', title: 'Imagina las<br><em>posibilidades.</em>', copy: 'Conversemos sobre la distribución, el acceso al lote y los acabados que te interesan, sin dar por hecho lo que incluye cada modelo.', caption: 'DISTRIBUCIÓN · ACABADOS · LOTE' }
+const photos = [
+  {
+    image: 'https://images.homify.com/images/a_0%2Cc_fit%2Cf_auto%2Cq_auto%2Cw_1108/v1577039330/p/photo/image/3299736/c72/fotos-de-casas-prefabricadas-de-estilo-moderno-de-prefabricados-palermo.jpg',
+    alt: 'Casa prefabricada colombiana de una planta con fachada clara y jardín sencillo',
+    kicker: 'CASAS PREFABRICADAS · COLOMBIA',
+    title: 'Tu casa.<br><em>Tu forma de vivir.</em>',
+    text: 'Viviendas funcionales que se ven bien, se sienten tuyas y parten de lo que necesitas para tu terreno.',
+    note: 'FACHADA · LUZ · ESPACIO'
+  },
+  {
+    image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg',
+    alt: 'Casa prefabricada amarilla de un piso, techo rojo y pequeño corredor en un entorno rural colombiano',
+    kicker: 'SENCILLA, CUIDADA Y FUNCIONAL',
+    title: 'Lo esencial,<br><em>con más carácter.</em>',
+    text: 'Una buena combinación de color, una entrada agradable y detalles bien presentados hacen la diferencia.',
+    note: 'COLOR · CUBIERTA · ENTRADA'
+  },
+  {
+    image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg',
+    alt: 'Vivienda prefabricada de paneles verdes y cubierta metálica en un terreno abierto',
+    kicker: 'IDEAS PARA TU PROYECTO',
+    title: 'Un espacio propio.<br><em>Muchas posibilidades.</em>',
+    text: 'Miremos opciones de vivienda sin perder de vista el terreno, el presupuesto y lo que incluye cada propuesta.',
+    note: 'PANELES · TERRENO · PROYECTO'
+  }
 ];
+
 const models = [
-  { id: 'esencial', n: '01', name: 'La esencial', tag: 'SENCILLA Y FUNCIONAL', image: 'https://www.casasprefabricadascolombia.com/images/modelos/14.jpg', alt: 'Referencia de casa prefabricada compacta', summary: 'Para empezar por los espacios indispensables y una distribución práctica.' },
-  { id: 'familiar', n: '02', name: 'La familiar', tag: 'ESPACIO PARA COMPARTIR', image: 'https://arquicasas.co/wp-content/uploads/2022/08/TOCOTA-05-48-MT2.jpg', alt: 'Referencia de casa prefabricada de un piso', summary: 'Una idea para organizar zonas comunes y espacios privados según tu familia.' },
-  { id: 'exterior', n: '03', name: 'Con espacio exterior', tag: 'PORCHE O CORREDOR', image: 'https://images.homify.com/c_fill%2Cf_auto%2Ch_700%2Cq_auto/v1577039332/p/photo/image/3299737/FB_IMG_1559322079978.jpg', alt: 'Referencia de casa prefabricada con porche', summary: 'Una entrada cubierta o un corredor pueden cambiar la forma de disfrutar la casa.' }
+  {
+    id: 'compacta', no: '01', title: 'La compacta', tag: 'SENCILLA Y FUNCIONAL',
+    image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg',
+    alt: 'Casa prefabricada amarilla con cubierta roja y un pequeño corredor',
+    body: 'Una idea para priorizar los espacios esenciales y una distribución práctica.'
+  },
+  {
+    id: 'familiar', no: '02', title: 'La familiar', tag: 'ESPACIO PARA COMPARTIR',
+    image: 'https://www.sucasaprefabricada.com/wp-content/uploads/2016/01/88m.jpg',
+    alt: 'Casa prefabricada blanca con cubierta roja y corredor al frente',
+    body: 'Una referencia para pensar en áreas comunes y espacios privados según tu familia.'
+  },
+  {
+    id: 'corredor', no: '03', title: 'Con corredor', tag: 'UNA ENTRADA ACOGEDORA',
+    image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg',
+    alt: 'Casa prefabricada de paneles verdes con ventanas blancas y cubierta metálica',
+    body: 'Un espacio de entrada cubierto puede ser útil; confirma con el proveedor si está incluido.'
+  }
 ];
 ---
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explora ideas de casas prefabricadas para tu terreno en Vergara, Cundinamarca. Define tus necesidades y conversa sobre las opciones." />
-  <meta name="theme-color" content="#17251f" /><title>Casas Prefabricadas Vergara | Tu casa, tu forma de vivir</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explora ideas de casas prefabricadas para tu terreno en Vergara, Cundinamarca, y prepara tu consulta por WhatsApp." />
+  <meta name="theme-color" content="#17251f" />
+  <title>Vergara | Casas prefabricadas</title>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Casas Prefabricadas Vergara, inicio">
+    <a class="brand" href="#inicio" aria-label="Vergara Casas Prefabricadas, inicio">
       <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M4 17.5 18 5l14 12.5V32H22V21h-8v11H4Z"/><path d="M25 9.5V4h4v9"/></svg></span>
       <span class="brand-words"><b>VERGARA</b><small>CASAS PREFABRICADAS</small></span>
     </a>
-    <nav class="main-nav" aria-label="Navegación principal"><a href="#modelos">Modelos</a><a href="#experiencia">La experiencia</a><a href="#terreno">Tu terreno</a></nav>
-    <a class="nav-cta" href="#contacto">Hablemos <span>↗</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
-    <div class="menu-panel" id="menuPanel" hidden><a href="#modelos">Explorar modelos <span>↗</span></a><a href="#experiencia">Cómo empezar <span>↗</span></a><a href="#terreno">Tu terreno <span>↗</span></a><a href="#contacto">Contacto <span>↗</span></a></div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#modelos">Diseños</a><a href="#tu-idea">Tu proyecto</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="#tu-idea">Cuéntanos tu idea <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    <div class="menu-panel" id="menuPanel" hidden>
+      <a href="#modelos">Ver diseños <span>↗</span></a><a href="#tu-idea">Armar mi idea <span>↗</span></a><a href="#contacto">Contacto <span>↗</span></a>
+    </div>
   </header>
+
   <main>
-    <section class="hero" id="inicio" aria-label="Presentación de casas prefabricadas">
-      <img class="hero-photo" id="heroPhoto" src={slides[0].image} alt={slides[0].alt} fetchpriority="high" />
+    <!-- SECCIÓN 1: BIENVENIDA -->
+    <section class="hero" id="inicio" aria-label="Bienvenida">
+      <img class="hero-photo" id="heroPhoto" src={photos[0].image} alt={photos[0].alt} fetchpriority="high" />
       <div class="hero-shade"></div>
-      <div class="hero-rail"><span class="rail-current" id="railCurrent">01</span><span class="rail-line"></span><span>03</span><small>EXPLORA</small></div>
       <div class="hero-copy">
-        <p class="eyebrow"><span></span><b id="heroEyebrow">{slides[0].eyebrow}</b></p>
-        <h1 id="heroTitle" set:html={slides[0].title}></h1>
-        <p class="hero-lead" id="heroCopy">{slides[0].copy}</p>
-        <div class="hero-actions"><a class="button button-cream" href="#modelos">Descubrir modelos <span>↘</span></a><a class="quiet-link" href="#experiencia">Así empieza tu proyecto <span>↗</span></a></div>
+        <p class="eyebrow"><span></span><b id="heroKicker">{photos[0].kicker}</b></p>
+        <h1 id="heroTitle" set:html={photos[0].title}></h1>
+        <p class="hero-lead" id="heroText">{photos[0].text}</p>
+        <div class="hero-actions">
+          <a class="button button-cream" href="#modelos">Explorar diseños <span>↘</span></a>
+          <a class="quiet-link" href="#tu-idea">Imagina tu proyecto <span>↗</span></a>
+        </div>
       </div>
-      <div class="hero-stamp"><i></i><span>IDEAS PARA VIVIENDA REAL</span><small>Vergara · Cundinamarca</small></div>
-      <div class="hero-hotspots" aria-label="Explora detalles de diseño">
-        <button type="button" class="hotspot" data-hotspot="cubierta" style="--left:68%;--top:26%" aria-label="Ver nota sobre la cubierta"><span>+</span></button>
-        <button type="button" class="hotspot" data-hotspot="fachada" style="--left:78%;--top:52%" aria-label="Ver nota sobre la fachada"><span>+</span></button>
-        <button type="button" class="hotspot" data-hotspot="acceso" style="--left:56%;--top:68%" aria-label="Ver nota sobre la entrada"><span>+</span></button>
-      </div>
-      <div class="hotspot-card" id="hotspotCard" hidden><button type="button" class="hotspot-close" id="hotspotClose" aria-label="Cerrar detalle">×</button><small id="hotspotLabel">DETALLE</small><h3 id="hotspotTitle">La cubierta</h3><p id="hotspotText">Un elemento para revisar con el proveedor según el modelo y el clima del terreno.</p></div>
+      <div class="hero-stamp"><span class="stamp-dot"></span><b>IDEAS PARA VIVIENDA REAL</b><small>Vergara · Cundinamarca</small></div>
       <div class="hero-bottom">
-        <div class="hero-caption"><span id="heroCaption">{slides[0].caption}</span><span class="caption-rule"></span><span>FOTOGRAFÍA DE REFERENCIA</span></div>
+        <div class="hero-caption"><span id="heroNote">{photos[0].note}</span><i></i><span>IMÁGENES DE REFERENCIA</span></div>
         <div class="slide-controls">
-          {slides.map((slide, i) => <button type="button" class:list={['slide-dot', i === 0 ? 'active' : '']} data-slide={i} aria-label={'Ver imagen ' + (i + 1)} aria-pressed={i === 0 ? 'true' : 'false'}><span>{String(i + 1).padStart(2, '0')}</span><i></i></button>)}
-          <button type="button" class="slide-arrow" id="previousSlide" aria-label="Imagen anterior">←</button><button type="button" class="slide-arrow" id="nextSlide" aria-label="Imagen siguiente">→</button>
+          {photos.map((photo, i) => <button type="button" class:list={['slide-dot', i === 0 ? 'active' : '']} data-slide={i} aria-label={'Ver imagen ' + (i + 1)} aria-pressed={i === 0 ? 'true' : 'false'}><span>{String(i + 1).padStart(2, '0')}</span><i></i></button>)}
+          <button type="button" class="slide-arrow" id="previousSlide" aria-label="Imagen anterior">←</button>
+          <button type="button" class="slide-arrow" id="nextSlide" aria-label="Imagen siguiente">→</button>
         </div>
       </div>
     </section>
 
-    <section class="intro section reveal" id="experiencia">
-      <div class="section-index"><span>01</span><i></i><small>LA IDEA</small></div>
-      <div class="intro-title"><p class="eyebrow dark"><span></span> UN HOGAR, HECHO A TU MEDIDA</p><h2>Una casa sencilla.<br><em>Una gran manera de vivir.</em></h2></div>
-      <div class="intro-text"><p>No se trata de convertir una casa prefabricada en una mansión. Se trata de mostrar lo mejor de cada vivienda: su forma, su luz, sus espacios y el potencial que tiene cuando se presenta con cuidado.</p><a class="underline-link" href="#modelos">Encuentra la idea que te representa <span>↗</span></a></div>
-    </section>
-
-    <section class="model-showcase section" id="modelos">
-      <div class="showcase-heading reveal"><div><p class="eyebrow dark"><span></span> MODELOS PARA EXPLORAR</p><h2>Diseños con sentido.<br><em>Espacios que se sienten tuyos.</em></h2></div><p>Empieza por la idea que te gusta. Después revisamos con el proveedor las medidas, los materiales, el transporte y lo que incluye la propuesta.</p></div>
-      <div class="model-layout">
-        <div class="model-list" role="tablist" aria-label="Ideas de vivienda">
-          {models.map((model, i) => <button type="button" class:list={['model-tab', i === 0 ? 'active' : '']} data-model={model.id} role="tab" aria-selected={i === 0 ? 'true' : 'false'} aria-controls="modelDetail"><span class="tab-number">{model.n}</span><span class="tab-copy"><small>{model.tag}</small><b>{model.name}</b></span><span class="tab-arrow">↗</span></button>)}
-          <div class="model-notes"><span class="notes-line"></span><p>Las fotos son referencias visuales, no un catálogo confirmado de modelos disponibles.</p></div>
+    <!-- SECCIÓN 2: MODELOS Y FOTOGRAFÍAS -->
+    <section class="models-section section" id="modelos">
+      <div class="section-heading">
+        <div><p class="eyebrow dark"><span></span> DISEÑOS PARA EXPLORAR</p><h2>Casas sencillas.<br><em>Ideas bien presentadas.</em></h2></div>
+        <p>Encuentra una referencia que se acerque a lo que imaginas. La fachada, los materiales, las medidas y lo incluido deben confirmarse con el proveedor.</p>
+      </div>
+      <div class="model-showcase">
+        <div class="model-list" role="tablist" aria-label="Selecciona una idea de vivienda">
+          {models.map((model, i) => <button type="button" class:list={['model-tab', i === 0 ? 'active' : '']} data-model={model.id} role="tab" aria-selected={i === 0 ? 'true' : 'false'} aria-controls="modelDetail"><span class="tab-number">{model.no}</span><span class="tab-copy"><small>{model.tag}</small><b>{model.title}</b></span><span class="tab-arrow">↗</span></button>)}
+          <p class="model-disclaimer">Fotografías de referencia de viviendas prefabricadas en Colombia. No son un catálogo confirmado del proveedor de Vergara.</p>
+          <a href="#tu-idea" class="model-next">Cuéntanos qué buscas <span>↘</span></a>
         </div>
-        <div class="model-visual reveal">
+        <div class="model-visual" id="modelVisual">
           {models.map((model, i) => <img class="model-image" data-image-model={model.id} src={model.image} alt={model.alt} loading="lazy" class:list={[i === 0 ? 'visible' : '']} />)}
-          <div class="model-image-shade"></div><div class="image-counter"><span id="modelCounter">01</span><i></i><span>03</span></div>
-          <button class="image-expand" id="openModelImage" type="button" aria-label="Ampliar fotografía seleccionada">⤢</button>
-          <div class="model-detail" id="modelDetail" role="tabpanel"><p class="detail-kicker" id="detailKicker">{models[0].tag}</p><h3 id="detailTitle">{models[0].name}</h3><p id="detailSummary">{models[0].summary}</p><a class="detail-link" href="#terreno">Explorar esta idea <span>↗</span></a></div>
+          <div class="model-image-shade"></div>
+          <div class="image-counter"><span id="modelCounter">01</span><i></i><span>03</span></div>
+          <button class="image-expand" id="openModelImage" type="button" aria-label="Ver fotografía más grande">⤢</button>
+          <div class="model-detail" id="modelDetail" role="tabpanel">
+            <p class="detail-kicker" id="detailTag">{models[0].tag}</p>
+            <h3 id="detailTitle">{models[0].title}</h3>
+            <p id="detailBody">{models[0].body}</p>
+          </div>
         </div>
       </div>
-      <div class="showcase-foot"><span>01 — 03</span><span>CASAS PREFABRICADAS · VERGARA</span><span>ESTILO FUNCIONAL, PRESENTACIÓN CUIDADA</span></div>
+      <div class="models-footer"><span>01 — 03</span><span>FUNCIONALIDAD · ESTILO · TERRENO</span></div>
     </section>
 
-    <section class="details-band">
-      <div class="details-photo"><img src="https://images.homify.com/c_fill%2Cf_auto%2Ch_700%2Cq_auto/v1577039332/p/photo/image/3299737/FB_IMG_1559322079978.jpg" alt="Porche sencillo con estructura ligera y espacio de entrada" loading="lazy"><div class="details-photo-note">DETALLES QUE DAN CARÁCTER <span>↗</span></div></div>
-      <div class="details-copy reveal"><p class="eyebrow"><span></span> LA DIFERENCIA ESTÁ EN CÓMO SE PRESENTA</p><h2>Más que paredes.<br><em>Un lugar para hacer vida.</em></h2><p>Una combinación de colores bien pensada, una entrada acogedora y una buena distribución ayudan a imaginar todo lo que una casa puede llegar a ser, manteniendo los pies en la tierra.</p><div class="detail-pills"><span><i>01</i> Fachada y color</span><span><i>02</i> Entrada y corredor</span><span><i>03</i> Espacios interiores</span></div><a class="button button-outline" href="#terreno">Armar mi idea <span>↘</span></a></div>
-    </section>
-
-    <section class="configurator section" id="terreno">
-      <div class="config-heading reveal"><div><p class="eyebrow dark"><span></span> TU PROYECTO COMIENZA AQUÍ</p><h2>Cuéntanos qué<br><em>estás imaginando.</em></h2></div><p>Selecciona algunas ideas. Al final podrás llevar este resumen a una conversación con el proveedor. No calcula precios ni confirma disponibilidad.</p></div>
+    <!-- SECCIÓN 3: FORMULARIO / CONFIGURADOR -->
+    <section class="configurator section" id="tu-idea">
+      <div class="config-heading">
+        <div><p class="eyebrow dark"><span></span> TU PROYECTO COMIENZA AQUÍ</p><h2>Cuéntanos qué<br><em>estás imaginando.</em></h2></div>
+        <p>Selecciona las opciones que mejor describen tu idea. Prepararemos un resumen para que lo envíes directamente por WhatsApp.</p>
+      </div>
       <div class="config-body">
         <div class="config-steps">
-          <fieldset class="config-group" data-choice-group="vivienda"><legend><span>01</span> ¿Qué tipo de casa tienes en mente?</legend><div class="choice-chips"><button type="button" class="choice-chip selected" data-value="Una casa compacta">Compacta</button><button type="button" class="choice-chip" data-value="Una casa para mi familia">Familiar</button><button type="button" class="choice-chip" data-value="Una casa con porche o corredor">Con corredor</button></div></fieldset>
-          <fieldset class="config-group" data-choice-group="terreno"><legend><span>02</span> ¿Cómo está tu terreno?</legend><div class="choice-chips"><button type="button" class="choice-chip selected" data-value="Lote sin pavimentar">Destapado / tierra</button><button type="button" class="choice-chip" data-value="Lote con acceso preparado">Acceso preparado</button><button type="button" class="choice-chip" data-value="Aún debo revisar el terreno">Por revisar</button></div></fieldset>
-          <fieldset class="config-group" data-choice-group="prioridad"><legend><span>03</span> ¿Qué te gustaría priorizar?</legend><div class="choice-chips"><button type="button" class="choice-chip selected" data-value="Distribución funcional">Funcionalidad</button><button type="button" class="choice-chip" data-value="Un espacio exterior agradable">Espacio exterior</button><button type="button" class="choice-chip" data-value="Revisar opciones por etapas">Construir por etapas</button></div></fieldset>
+          <fieldset class="config-group" data-choice-group="vivienda">
+            <legend><span>01</span><b>¿Qué tipo de casa tienes en mente?</b></legend>
+            <div class="choice-chips"><button type="button" class="choice-chip selected" data-value="Una casa compacta">Compacta</button><button type="button" class="choice-chip" data-value="Una casa para mi familia">Familiar</button><button type="button" class="choice-chip" data-value="Una casa con corredor">Con corredor</button></div>
+          </fieldset>
+          <fieldset class="config-group" data-choice-group="terreno">
+            <legend><span>02</span><b>¿Cómo está tu terreno?</b></legend>
+            <div class="choice-chips"><button type="button" class="choice-chip selected" data-value="Lote destapado o de tierra">Destapado / tierra</button><button type="button" class="choice-chip" data-value="Lote con acceso preparado">Acceso preparado</button><button type="button" class="choice-chip" data-value="Terreno por revisar">Por revisar</button></div>
+          </fieldset>
+          <fieldset class="config-group" data-choice-group="prioridad">
+            <legend><span>03</span><b>¿Qué te gustaría priorizar?</b></legend>
+            <div class="choice-chips"><button type="button" class="choice-chip selected" data-value="Distribución funcional">Funcionalidad</button><button type="button" class="choice-chip" data-value="Un espacio exterior agradable">Espacio exterior</button><button type="button" class="choice-chip" data-value="Construir por etapas">Construir por etapas</button></div>
+          </fieldset>
         </div>
         <aside class="config-summary">
-          <div class="summary-head"><span>RESUMEN DE TU IDEA</span><span class="live-dot"></span></div><h3>Vamos paso a paso.</h3>
-          <div class="summary-row"><span>VIVIENDA</span><b id="summaryVivienda">Una casa compacta</b></div><div class="summary-row"><span>TERRENO</span><b id="summaryTerreno">Lote sin pavimentar</b></div><div class="summary-row"><span>PRIORIDAD</span><b id="summaryPrioridad">Distribución funcional</b></div>
-          <p class="summary-note">Este resumen sirve para iniciar la conversación. Las características, los costos y las obras necesarias deben revisarse con el proveedor.</p>
-          <a class="button button-cream summary-cta" id="whatsAppSummary" href="https://wa.me/573134843085?text=Hola%2C%20quiero%20consultar%20por%20una%20casa%20prefabricada." target="_blank" rel="noopener noreferrer">Llevar mi idea a WhatsApp <span>↗</span></a><small class="contact-warning">Número de contacto provisional: confirmar antes de publicar oficialmente.</small>
+          <div class="summary-head"><span>RESUMEN DE TU IDEA</span><span class="live-dot"></span></div>
+          <h3>Vamos paso a paso.</h3>
+          <div class="summary-row"><span>TIPO DE CASA</span><b id="summaryVivienda">Una casa compacta</b></div>
+          <div class="summary-row"><span>TERRENO</span><b id="summaryTerreno">Lote destapado o de tierra</b></div>
+          <div class="summary-row"><span>PRIORIDAD</span><b id="summaryPrioridad">Distribución funcional</b></div>
+          <p class="summary-note">Este resumen es una consulta inicial; no confirma precio, disponibilidad ni trabajos incluidos.</p>
+          <a class="button button-cream summary-cta" id="whatsAppSummary" href="https://wa.me/573134843085" target="_blank" rel="noopener noreferrer">Enviar mi idea por WhatsApp <span>↗</span></a>
         </aside>
       </div>
     </section>
 
-    <section class="process"><div class="process-top section"><div class="section-index"><span>02</span><i></i><small>EL CAMINO</small></div><div class="process-heading reveal"><p class="eyebrow"><span></span> CLARIDAD DESDE EL PRINCIPIO</p><h2>Del terreno<br><em>a tu próxima casa.</em></h2></div></div>
-      <div class="process-strip section"><article class="process-item reveal"><span>01</span><div class="step-icon">⌖</div><div><h3>Conocer el lote</h3><p>Ubicación, acceso, pendiente y condiciones del terreno.</p></div></article><article class="process-item reveal"><span>02</span><div class="step-icon">⌂</div><div><h3>Definir necesidades</h3><p>Distribución y espacios que de verdad necesitas.</p></div></article><article class="process-item reveal"><span>03</span><div class="step-icon">↗</div><div><h3>Revisar la propuesta</h3><p>Materiales, base, transporte, instalación y acabados por separado.</p></div></article></div>
-    </section>
-
+    <!-- SECCIÓN 4: CIERRE Y CONTACTO -->
     <section class="contact section" id="contacto">
-      <div class="contact-copy reveal"><p class="eyebrow dark"><span></span> EL SIGUIENTE PASO ES CONVERSAR</p><h2>Tu casa no empieza<br>con un plano.<br><em>Empieza con una idea.</em></h2><p>Cuéntanos qué quieres construir en Vergara y qué condiciones tiene tu lote. Revisemos juntos cuáles serían los siguientes pasos.</p></div>
-      <div class="contact-panel reveal"><span class="contact-index">VERGARA · CASAS PREFABRICADAS</span><h3>Hagamos que tu idea tome forma.</h3><p>Una conversación puede ayudarte a entender qué opciones revisar y qué preguntas hacer antes de cotizar.</p><a class="button button-cream" href="#terreno">Preparar mi idea <span>↗</span></a><div class="contact-divider"></div><span class="contact-footnote">Imágenes de referencia. Los modelos y las especificaciones deben confirmarse con el proveedor.</span></div>
+      <div class="contact-copy">
+        <p class="eyebrow"><span></span> EL SIGUIENTE PASO ES CONVERSAR</p>
+        <h2>Tu casa no empieza<br>con un plano.<br><em>Empieza con una idea.</em></h2>
+        <p>Cuéntanos qué quieres construir en Vergara y qué condiciones tiene tu lote. Con el resumen que preparaste, puedes escribirnos y comenzar la conversación.</p>
+      </div>
+      <div class="contact-panel">
+        <span class="contact-index">VERGARA · CASAS PREFABRICADAS</span>
+        <h3>Hagamos que tu idea tome forma.</h3>
+        <p>Envía tus preferencias por WhatsApp y consulta qué opciones existen para tu terreno.</p>
+        <a class="button button-cream" id="whatsAppFinal" href="https://wa.me/573134843085" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp <span>↗</span></a>
+        <div class="contact-divider"></div>
+        <span class="contact-footnote">Las fotos son referencias visuales. Los modelos, materiales y especificaciones deben confirmarse con el proveedor.</span>
+      </div>
     </section>
   </main>
-  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-icon"><svg viewBox="0 0 36 36"><path d="M4 17.5 18 5l14 12.5V32H22V21h-8v11H4Z"/><path d="M25 9.5V4h4v9"/></svg></span><span class="brand-words"><b>VERGARA</b><small>CASAS PREFABRICADAS</small></span></a><span>Diseño con los pies en la tierra.</span><small>© {new Date().getFullYear()} · Sitio demostrativo</small></footer>
-  <dialog id="photoDialog" class="photo-dialog"><button type="button" id="closePhotoDialog" class="dialog-close" aria-label="Cerrar fotografía">×</button><img id="dialogPhoto" src={models[0].image} alt={models[0].alt}><p id="dialogCaption">{models[0].name} · Imagen de referencia</p></dialog>
+
+  <footer class="footer">
+    <a class="brand" href="#inicio"><span class="brand-icon"><svg viewBox="0 0 36 36"><path d="M4 17.5 18 5l14 12.5V32H22V21h-8v11H4Z"/><path d="M25 9.5V4h4v9"/></svg></span><span class="brand-words"><b>VERGARA</b><small>CASAS PREFABRICADAS</small></span></a>
+    <span>Diseño con los pies en la tierra.</span><small>© {new Date().getFullYear()} · Sitio demostrativo</small>
+  </footer>
+
+  <dialog id="photoDialog" class="photo-dialog"><button type="button" id="closePhotoDialog" class="dialog-close" aria-label="Cerrar fotografía">×</button><img id="dialogPhoto" src={models[0].image} alt={models[0].alt}><p id="dialogCaption">{models[0].title} · Foto de referencia</p></dialog>
 
   <script>
     const slides = [
-      { image: 'https://arquicasas.co/wp-content/uploads/2022/08/TOCOTA-05-48-MT2.jpg', alt: 'Casa prefabricada de un piso con fachada clara y cubierta sencilla', eyebrow: 'UNA CASA PARA TU HISTORIA', title: 'Tu casa.<br><em>Tu forma de vivir.</em>', copy: 'Viviendas prefabricadas funcionales, con una presentación cuidada y opciones por explorar según tu terreno y tus necesidades.', caption: 'FACHADA · LUZ · ESPACIO' },
-      { image: 'https://images.homify.com/c_fill%2Cf_auto%2Ch_700%2Cq_auto/v1577039332/p/photo/image/3299737/FB_IMG_1559322079978.jpg', alt: 'Vivienda prefabricada clara con porche y espacio exterior', eyebrow: 'ESPACIOS SENCILLOS, BIEN PENSADOS', title: 'Lo esencial,<br><em>con más estilo.</em>', copy: 'Una fachada limpia, una entrada agradable y espacios que se adapten a la vida real. El buen diseño también está en los detalles.', caption: 'ENTRADA · PORCHE · ENTORNO' },
-      { image: 'https://www.casasprefabricadascolombia.com/images/modelos/14.jpg', alt: 'Casa prefabricada compacta con ventanas amplias y plantas exteriores', eyebrow: 'IDEAS PARA EMPEZAR', title: 'Imagina las<br><em>posibilidades.</em>', copy: 'Conversemos sobre la distribución, el acceso al lote y los acabados que te interesan, sin dar por hecho lo que incluye cada modelo.', caption: 'DISTRIBUCIÓN · ACABADOS · LOTE' }
+      { image: 'https://images.homify.com/images/a_0%2Cc_fit%2Cf_auto%2Cq_auto%2Cw_1108/v1577039330/p/photo/image/3299736/c72/fotos-de-casas-prefabricadas-de-estilo-moderno-de-prefabricados-palermo.jpg', alt: 'Casa prefabricada colombiana de una planta con fachada clara y jardín sencillo', kicker: 'CASAS PREFABRICADAS · COLOMBIA', title: 'Tu casa.<br><em>Tu forma de vivir.</em>', text: 'Viviendas funcionales que se ven bien, se sienten tuyas y parten de lo que necesitas para tu terreno.', note: 'FACHADA · LUZ · ESPACIO' },
+      { image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg', alt: 'Casa prefabricada amarilla de un piso con cubierta roja', kicker: 'SENCILLA, CUIDADA Y FUNCIONAL', title: 'Lo esencial,<br><em>con más carácter.</em>', text: 'Una buena combinación de color, una entrada agradable y detalles bien presentados hacen la diferencia.', note: 'COLOR · CUBIERTA · ENTRADA' },
+      { image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg', alt: 'Vivienda prefabricada de paneles verdes y cubierta metálica', kicker: 'IDEAS PARA TU PROYECTO', title: 'Un espacio propio.<br><em>Muchas posibilidades.</em>', text: 'Miremos opciones sin perder de vista el terreno, el presupuesto y lo que incluye cada propuesta.', note: 'PANELES · TERRENO · PROYECTO' }
     ];
     const models = [
-      { id: 'esencial', n: '01', name: 'La esencial', tag: 'SENCILLA Y FUNCIONAL', image: 'https://www.casasprefabricadascolombia.com/images/modelos/14.jpg', alt: 'Referencia de casa prefabricada compacta', summary: 'Para empezar por los espacios indispensables y una distribución práctica.' },
-      { id: 'familiar', n: '02', name: 'La familiar', tag: 'ESPACIO PARA COMPARTIR', image: 'https://arquicasas.co/wp-content/uploads/2022/08/TOCOTA-05-48-MT2.jpg', alt: 'Referencia de casa prefabricada de un piso', summary: 'Una idea para organizar zonas comunes y espacios privados según tu familia.' },
-      { id: 'exterior', n: '03', name: 'Con espacio exterior', tag: 'PORCHE O CORREDOR', image: 'https://images.homify.com/c_fill%2Cf_auto%2Ch_700%2Cq_auto/v1577039332/p/photo/image/3299737/FB_IMG_1559322079978.jpg', alt: 'Referencia de casa prefabricada con porche', summary: 'Una entrada cubierta o un corredor pueden cambiar la forma de disfrutar la casa.' }
+      { id: 'compacta', no: '01', title: 'La compacta', tag: 'SENCILLA Y FUNCIONAL', image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg', alt: 'Casa prefabricada amarilla con cubierta roja y un pequeño corredor', body: 'Una idea para priorizar los espacios esenciales y una distribución práctica.' },
+      { id: 'familiar', no: '02', title: 'La familiar', tag: 'ESPACIO PARA COMPARTIR', image: 'https://www.sucasaprefabricada.com/wp-content/uploads/2016/01/88m.jpg', alt: 'Casa prefabricada blanca con cubierta roja y corredor al frente', body: 'Una referencia para pensar en áreas comunes y espacios privados según tu familia.' },
+      { id: 'corredor', no: '03', title: 'Con corredor', tag: 'UNA ENTRADA ACOGEDORA', image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg', alt: 'Casa prefabricada de paneles verdes con ventanas blancas y cubierta metálica', body: 'Un espacio de entrada cubierto puede ser útil; confirma con el proveedor si está incluido.' }
     ];
     let activeSlide = 0;
     const heroPhoto = document.querySelector('#heroPhoto');
@@ -133,90 +203,89 @@ const models = [
       const slide = slides[activeSlide];
       heroPhoto.classList.add('changing');
       window.setTimeout(() => {
-        heroPhoto.src = slide.image; heroPhoto.alt = slide.alt;
-        document.querySelector('#heroEyebrow').textContent = slide.eyebrow;
+        heroPhoto.src = slide.image;
+        heroPhoto.alt = slide.alt;
+        document.querySelector('#heroKicker').textContent = slide.kicker;
         document.querySelector('#heroTitle').innerHTML = slide.title;
-        document.querySelector('#heroCopy').textContent = slide.copy;
-        document.querySelector('#heroCaption').textContent = slide.caption;
-        document.querySelector('#railCurrent').textContent = String(activeSlide + 1).padStart(2, '0');
-        document.querySelectorAll('.slide-dot').forEach((dot, i) => {
-          dot.classList.toggle('active', i === activeSlide); dot.setAttribute('aria-pressed', String(i === activeSlide));
+        document.querySelector('#heroText').textContent = slide.text;
+        document.querySelector('#heroNote').textContent = slide.note;
+        document.querySelectorAll('.slide-dot').forEach((button, i) => {
+          const selected = i === activeSlide;
+          button.classList.toggle('active', selected);
+          button.setAttribute('aria-pressed', String(selected));
         });
         heroPhoto.classList.remove('changing');
-      }, 140);
+      }, 160);
     }
     document.querySelectorAll('.slide-dot').forEach(button => button.addEventListener('click', () => showSlide(Number(button.dataset.slide))));
     document.querySelector('#previousSlide').addEventListener('click', () => showSlide(activeSlide - 1));
     document.querySelector('#nextSlide').addEventListener('click', () => showSlide(activeSlide + 1));
 
-    const hotspotInfo = {
-      cubierta: { label: 'DETALLE PARA REVISAR', title: 'La cubierta', text: 'Pregunta por los materiales, el manejo de aguas lluvias y la solución adecuada para el clima del lote.' },
-      fachada: { label: 'DETALLE PARA REVISAR', title: 'La fachada', text: 'Colores, texturas y remates pueden cambiar la presentación. Confirma las opciones de acabado disponibles.' },
-      acceso: { label: 'DETALLE PARA REVISAR', title: 'La entrada', text: 'Una zona de acceso o corredor puede ser parte del diseño o un elemento adicional: conviene aclararlo al cotizar.' }
-    };
-    const hotspotCard = document.querySelector('#hotspotCard');
-    document.querySelectorAll('.hotspot').forEach(button => button.addEventListener('click', () => {
-      const info = hotspotInfo[button.dataset.hotspot];
-      document.querySelector('#hotspotLabel').textContent = info.label;
-      document.querySelector('#hotspotTitle').textContent = info.title;
-      document.querySelector('#hotspotText').textContent = info.text;
-      hotspotCard.hidden = false;
-    }));
-    document.querySelector('#hotspotClose').addEventListener('click', () => hotspotCard.hidden = true);
-
     function showModel(id) {
-      const activeModel = models.findIndex(model => model.id === id);
-      const selectedIndex = activeModel < 0 ? 0 : activeModel;
-      const model = models[selectedIndex];
+      const model = models.find(item => item.id === id) || models[0];
       document.querySelectorAll('.model-tab').forEach(button => {
         const selected = button.dataset.model === model.id;
-        button.classList.toggle('active', selected); button.setAttribute('aria-selected', String(selected));
+        button.classList.toggle('active', selected);
+        button.setAttribute('aria-selected', String(selected));
       });
       document.querySelectorAll('.model-image').forEach(img => img.classList.toggle('visible', img.dataset.imageModel === model.id));
-      document.querySelector('#modelCounter').textContent = model.n;
-      document.querySelector('#detailKicker').textContent = model.tag;
-      document.querySelector('#detailTitle').textContent = model.name;
-      document.querySelector('#detailSummary').textContent = model.summary;
+      document.querySelector('#modelCounter').textContent = model.no;
+      document.querySelector('#detailTag').textContent = model.tag;
+      document.querySelector('#detailTitle').textContent = model.title;
+      document.querySelector('#detailBody').textContent = model.body;
       document.querySelector('#dialogPhoto').src = model.image;
       document.querySelector('#dialogPhoto').alt = model.alt;
-      document.querySelector('#dialogCaption').textContent = model.name + ' · Imagen de referencia';
+      document.querySelector('#dialogCaption').textContent = model.title + ' · Foto de referencia';
     }
     document.querySelectorAll('.model-tab').forEach(button => button.addEventListener('click', () => showModel(button.dataset.model)));
     document.querySelector('#openModelImage').addEventListener('click', () => document.querySelector('#photoDialog').showModal());
     document.querySelector('#closePhotoDialog').addEventListener('click', () => document.querySelector('#photoDialog').close());
     document.querySelector('#photoDialog').addEventListener('click', event => { if (event.target === event.currentTarget) event.currentTarget.close(); });
 
-    const selections = { vivienda: 'Una casa compacta', terreno: 'Lote sin pavimentar', prioridad: 'Distribución funcional' };
+    const whatsappNumber = '573134843085'; // Confirmar este número antes del lanzamiento.
+    const selections = { vivienda: 'Una casa compacta', terreno: 'Lote destapado o de tierra', prioridad: 'Distribución funcional' };
     function updateSummary() {
-      for (const group of Object.keys(selections)) document.querySelector('#summary' + group[0].toUpperCase() + group.slice(1)).textContent = selections[group];
-      const text = 'Hola, quiero consultar por una casa prefabricada en Vergara. Mi idea: ' + selections.vivienda + '; terreno: ' + selections.terreno + '; prioridad: ' + selections.prioridad + '. ¿Qué opciones y qué incluye cada propuesta?';
-      document.querySelector('#whatsAppSummary').href = 'https://wa.me/573134843085?text=' + encodeURIComponent(text);
+      for (const group of Object.keys(selections)) {
+        document.querySelector('#summary' + group[0].toUpperCase() + group.slice(1)).textContent = selections[group];
+      }
+      const message = 'Hola, vi la página de Casas Prefabricadas Vergara y quiero consultar por una casa. Mi idea: ' +
+        selections.vivienda + '; mi terreno: ' + selections.terreno + '; prioridad: ' + selections.prioridad +
+        '. ¿Me pueden contar qué opciones tienen y qué incluye la propuesta?';
+      const link = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+      document.querySelector('#whatsAppSummary').href = link;
+      document.querySelector('#whatsAppFinal').href = link;
     }
-    document.querySelectorAll('.config-group').forEach(group => group.querySelectorAll('.choice-chip').forEach(button => button.addEventListener('click', () => {
-      group.querySelectorAll('.choice-chip').forEach(option => { option.classList.remove('selected'); option.setAttribute('aria-pressed', 'false'); });
-      button.classList.add('selected'); button.setAttribute('aria-pressed', 'true');
-      selections[group.dataset.choiceGroup] = button.dataset.value; updateSummary();
-    })));
-    document.querySelectorAll('.choice-chip').forEach(button => button.setAttribute('aria-pressed', button.classList.contains('selected') ? 'true' : 'false'));
-
-    const menuToggle = document.querySelector('#menuToggle'), menuPanel = document.querySelector('#menuPanel');
-    menuToggle.addEventListener('click', () => {
-      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', String(!isOpen)); menuPanel.hidden = isOpen;
+    document.querySelectorAll('.config-group').forEach(group => {
+      group.querySelectorAll('.choice-chip').forEach(button => button.addEventListener('click', () => {
+        group.querySelectorAll('.choice-chip').forEach(option => {
+          option.classList.remove('selected');
+          option.setAttribute('aria-pressed', 'false');
+        });
+        button.classList.add('selected');
+        button.setAttribute('aria-pressed', 'true');
+        selections[group.dataset.choiceGroup] = button.dataset.value;
+        updateSummary();
+      }));
     });
-    menuPanel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menuPanel.hidden = true; menuToggle.setAttribute('aria-expanded', 'false'); }));
+    document.querySelectorAll('.choice-chip').forEach(button => button.setAttribute('aria-pressed', button.classList.contains('selected') ? 'true' : 'false'));
+    updateSummary();
+
+    const menuToggle = document.querySelector('#menuToggle');
+    const menuPanel = document.querySelector('#menuPanel');
+    menuToggle.addEventListener('click', () => {
+      const open = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!open));
+      menuPanel.hidden = open;
+    });
+    menuPanel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menuPanel.hidden = true;
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
     const progress = document.querySelector('#scrollProgress');
     window.addEventListener('scroll', () => {
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.width = (maxScroll > 0 ? window.scrollY / maxScroll * 100 : 0) + '%';
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
     }, { passive: true });
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('motion-ready');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(item => observer.observe(item));
-    }
   </script>
 </body>
 </html>
