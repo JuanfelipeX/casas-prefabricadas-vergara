@@ -324,10 +324,9 @@ const models = [
       document.body.classList.add('motion-enabled');
       const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            revealObserver.unobserve(entry.target);
-          }
+          // El reveal se activa al entrar en pantalla y se revierte al salir,
+          // tanto al bajar como al volver a subir por la página.
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
       revealItems.forEach(item => {
