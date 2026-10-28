@@ -53,8 +53,9 @@
 .contact-panel:hover{transform:translateY(-4px);box-shadow:0 24px 60px #0002}
 .contact-panel .button{box-shadow:0 8px 22px #17251f18}
 .contact-panel .button:hover{box-shadow:0 12px 28px #17251f30}
-.motion-enabled .reveal{opacity:0;transform:translate3d(0,26px,0);filter:blur(4px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.motion-enabled .reveal{opacity:0;transform:translate3d(0,26px,0);filter:blur(4px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1),filter .65s;will-change:opacity,transform,filter}
 .motion-enabled .reveal.is-visible{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+@media(prefers-reduced-motion:reduce){.motion-enabled .reveal,.motion-enabled .reveal.is-visible{opacity:1;transform:none;filter:none;transition:none;will-change:auto}}
 .motion-enabled .model-list.reveal,.motion-enabled .model-visual.reveal{transition-delay:.06s}
 .motion-enabled .config-summary.reveal,.motion-enabled .contact-panel.reveal{transition-delay:.12s}
 @media(max-width:700px){
