@@ -239,6 +239,15 @@ const models = [
       document.querySelector('#dialogPhoto').src = model.image;
       document.querySelector('#dialogPhoto').alt = model.alt;
       document.querySelector('#dialogCaption').textContent = model.title + ' · Foto de referencia';
+      const typeByModel = {
+        compacta: 'Una casa compacta',
+        familiar: 'Una casa para mi familia',
+        corredor: 'Una casa con corredor'
+      };
+      const matchingChoice = document.querySelector(
+        '.config-group[data-choice-group="vivienda"] .choice-chip[data-value="' + typeByModel[model.id] + '"]'
+      );
+      if (matchingChoice && !matchingChoice.classList.contains('selected')) matchingChoice.click();
     }
     document.querySelectorAll('.model-tab').forEach(button => button.addEventListener('click', () => showModel(button.dataset.model)));
     document.querySelector('#openModelImage').addEventListener('click', () => document.querySelector('#photoDialog').showModal());
@@ -285,7 +294,20 @@ const models = [
     }));
     const progress = document.querySelector('#scrollProgress');
     const topbar = document.querySelector('.topbar');
+    const heroSection = document.querySelector('.hero');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // En móvil, deslizar la portada también cambia la foto.
+    let swipeStartX = null;
+    heroSection.addEventListener('touchstart', event => {
+      swipeStartX = event.touches.length === 1 ? event.touches[0].clientX : null;
+    }, { passive: true });
+    heroSection.addEventListener('touchend', event => {
+      if (swipeStartX === null || !event.changedTouches.length) return;
+      const distance = event.changedTouches[0].clientX - swipeStartX;
+      if (Math.abs(distance) > 55) showSlide(activeSlide + (distance < 0 ? 1 : -1));
+      swipeStartX = null;
+    }, { passive: true });
 
     function updateScrollUI() {
       const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -315,15 +337,14 @@ const models = [
     }
 
     if (!reducedMotion && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-      const hero = document.querySelector('.hero');
-      hero.addEventListener('pointermove', event => {
-        const bounds = hero.getBoundingClientRect();
+      heroSection.addEventListener('pointermove', event => {
+        const bounds = heroSection.getBoundingClientRect();
         const x = (event.clientX - bounds.left) / bounds.width - 0.5;
         const y = (event.clientY - bounds.top) / bounds.height - 0.5;
         heroPhoto.style.setProperty('--pointer-x', (x * -9).toFixed(2) + 'px');
         heroPhoto.style.setProperty('--pointer-y', (y * -6).toFixed(2) + 'px');
       });
-      hero.addEventListener('pointerleave', () => {
+      heroSection.addEventListener('pointerleave', () => {
         heroPhoto.style.setProperty('--pointer-x', '0px');
         heroPhoto.style.setProperty('--pointer-y', '0px');
       });
