@@ -1,28 +1,26 @@
 ---
 import '../styles/global.css';
 
-const imageBase = import.meta.env.BASE_URL + 'images/';
-
 const photos = [
   {
-    image: imageBase + 'casa-verga-1.webp',
-    alt: 'Casa prefabricada de fachada blanca, cubierta metálica oscura y corredor, en un lote de tierra al atardecer',
+    image: 'https://images.homify.com/images/a_0%2Cc_fit%2Cf_auto%2Cq_auto%2Cw_1108/v1577039330/p/photo/image/3299736/c72/fotos-de-casas-prefabricadas-de-estilo-moderno-de-prefabricados-palermo.jpg',
+    alt: 'Casa prefabricada colombiana de una planta con fachada clara y jardín sencillo',
     kicker: 'CASAS PREFABRICADAS · COLOMBIA',
     title: 'Tu casa.<br><em>Tu forma de vivir.</em>',
     text: 'Viviendas funcionales que se ven bien, se sienten tuyas y parten de lo que necesitas para tu terreno.',
     note: 'FACHADA · LUZ · ESPACIO'
   },
   {
-    image: imageBase + 'casa-verga-2.webp',
-    alt: 'Casa prefabricada de fachada crema y verde oliva, cubierta oscura y terreno destapado entre montañas al atardecer',
+    image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg',
+    alt: 'Casa prefabricada amarilla de un piso, techo rojo y pequeño corredor en un entorno rural colombiano',
     kicker: 'SENCILLA, CUIDADA Y FUNCIONAL',
     title: 'Lo esencial,<br><em>con más carácter.</em>',
     text: 'Una buena combinación de color, una entrada agradable y detalles bien presentados hacen la diferencia.',
     note: 'COLOR · CUBIERTA · ENTRADA'
   },
   {
-    image: imageBase + 'casa-verga-3.webp',
-    alt: 'Casa prefabricada clara con puerta de madera, corredor largo, techo metálico y terreno rural',
+    image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg',
+    alt: 'Vivienda prefabricada de paneles verdes y cubierta metálica en un terreno abierto',
     kicker: 'IDEAS PARA TU PROYECTO',
     title: 'Un espacio propio.<br><em>Muchas posibilidades.</em>',
     text: 'Miremos opciones de vivienda sin perder de vista el terreno, el presupuesto y lo que incluye cada propuesta.',
@@ -33,20 +31,20 @@ const photos = [
 const models = [
   {
     id: 'compacta', no: '01', title: 'La compacta', tag: 'SENCILLA Y FUNCIONAL',
-    image: imageBase + 'casa-verga-2.webp',
-    alt: 'Casa prefabricada de fachada blanca, cubierta metálica oscura y corredor, en un lote de tierra al atardecer',
+    image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg',
+    alt: 'Casa prefabricada amarilla con cubierta roja y un pequeño corredor',
     body: 'Una idea para priorizar los espacios esenciales y una distribución práctica.'
   },
   {
     id: 'familiar', no: '02', title: 'La familiar', tag: 'ESPACIO PARA COMPARTIR',
-    image: imageBase + 'casa-verga-2.webp',
-    alt: 'Casa prefabricada de fachada crema y verde oliva, cubierta oscura y terreno destapado entre montañas al atardecer',
+    image: 'https://www.sucasaprefabricada.com/wp-content/uploads/2016/01/88m.jpg',
+    alt: 'Casa prefabricada blanca con cubierta roja y corredor al frente',
     body: 'Una referencia para pensar en áreas comunes y espacios privados según tu familia.'
   },
   {
     id: 'corredor', no: '03', title: 'Con corredor', tag: 'UNA ENTRADA ACOGEDORA',
-    image: imageBase + 'casa-verga-3.webp',
-    alt: 'Casa prefabricada clara con puerta de madera, corredor largo, techo metálico y terreno rural',
+    image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg',
+    alt: 'Casa prefabricada de paneles verdes con ventanas blancas y cubierta metálica',
     body: 'Un espacio de entrada cubierto puede ser útil; confirma con el proveedor si está incluido.'
   }
 ];
@@ -80,7 +78,7 @@ const models = [
   <main>
     <!-- SECCIÓN 1: BIENVENIDA -->
     <section class="hero" id="inicio" aria-label="Bienvenida">
-      <img class="hero-photo" id="heroPhoto" src={photos[0].image} alt={photos[0].alt} data-image-base={imageBase} fetchpriority="high" />
+      <img class="hero-photo" id="heroPhoto" src={photos[0].image} alt={photos[0].alt} fetchpriority="high" />
       <div class="hero-shade"></div>
       <div class="hero-copy">
         <p class="eyebrow"><span></span><b id="heroKicker">{photos[0].kicker}</b></p>
@@ -185,19 +183,18 @@ const models = [
     <span>Diseño con los pies en la tierra.</span><small>© {new Date().getFullYear()} · Sitio demostrativo</small>
   </footer>
 
-  <dialog id="photoDialog" class="photo-dialog"><button type="button" id="closePhotoDialog" class="dialog-close" aria-label="Cerrar fotografía">×</button><img id="dialogPhoto" src={models[0].image} alt={models[0].alt}><p id="dialogCaption">{models[0].title} · Imagen generada de referencia</p></dialog>
+  <dialog id="photoDialog" class="photo-dialog"><button type="button" id="closePhotoDialog" class="dialog-close" aria-label="Cerrar fotografía">×</button><img id="dialogPhoto" src={models[0].image} alt={models[0].alt}><p id="dialogCaption">{models[0].title} · Foto de referencia</p></dialog>
 
   <script>
-    const imageBase = document.querySelector('#heroPhoto').dataset.imageBase;
     const slides = [
-      { image: imageBase + 'casa-verga-1.webp', alt: 'Casa prefabricada colombiana de una planta con fachada clara y jardín sencillo', kicker: 'CASAS PREFABRICADAS · COLOMBIA', title: 'Tu casa.<br><em>Tu forma de vivir.</em>', text: 'Viviendas funcionales que se ven bien, se sienten tuyas y parten de lo que necesitas para tu terreno.', note: 'FACHADA · LUZ · ESPACIO' },
-      { image: imageBase + 'casa-verga-2.webp', alt: 'Casa prefabricada amarilla de un piso con cubierta roja', kicker: 'SENCILLA, CUIDADA Y FUNCIONAL', title: 'Lo esencial,<br><em>con más carácter.</em>', text: 'Una buena combinación de color, una entrada agradable y detalles bien presentados hacen la diferencia.', note: 'COLOR · CUBIERTA · ENTRADA' },
-      { image: imageBase + 'casa-verga-3.webp', alt: 'Vivienda prefabricada de paneles verdes y cubierta metálica', kicker: 'IDEAS PARA TU PROYECTO', title: 'Un espacio propio.<br><em>Muchas posibilidades.</em>', text: 'Miremos opciones sin perder de vista el terreno, el presupuesto y lo que incluye cada propuesta.', note: 'PANELES · TERRENO · PROYECTO' }
+      { image: 'https://images.homify.com/images/a_0%2Cc_fit%2Cf_auto%2Cq_auto%2Cw_1108/v1577039330/p/photo/image/3299736/c72/fotos-de-casas-prefabricadas-de-estilo-moderno-de-prefabricados-palermo.jpg', alt: 'Casa prefabricada colombiana de una planta con fachada clara y jardín sencillo', kicker: 'CASAS PREFABRICADAS · COLOMBIA', title: 'Tu casa.<br><em>Tu forma de vivir.</em>', text: 'Viviendas funcionales que se ven bien, se sienten tuyas y parten de lo que necesitas para tu terreno.', note: 'FACHADA · LUZ · ESPACIO' },
+      { image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg', alt: 'Casa prefabricada amarilla de un piso con cubierta roja', kicker: 'SENCILLA, CUIDADA Y FUNCIONAL', title: 'Lo esencial,<br><em>con más carácter.</em>', text: 'Una buena combinación de color, una entrada agradable y detalles bien presentados hacen la diferencia.', note: 'COLOR · CUBIERTA · ENTRADA' },
+      { image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg', alt: 'Vivienda prefabricada de paneles verdes y cubierta metálica', kicker: 'IDEAS PARA TU PROYECTO', title: 'Un espacio propio.<br><em>Muchas posibilidades.</em>', text: 'Miremos opciones sin perder de vista el terreno, el presupuesto y lo que incluye cada propuesta.', note: 'PANELES · TERRENO · PROYECTO' }
     ];
     const models = [
-      { id: 'compacta', no: '01', title: 'La compacta', tag: 'SENCILLA Y FUNCIONAL', image: imageBase + 'casa-verga-2.webp', alt: 'Casa prefabricada amarilla con cubierta roja y un pequeño corredor', body: 'Una idea para priorizar los espacios esenciales y una distribución práctica.' },
-      { id: 'familiar', no: '02', title: 'La familiar', tag: 'ESPACIO PARA COMPARTIR', image: imageBase + 'casa-verga-2.webp', alt: 'Casa prefabricada blanca con cubierta roja y corredor al frente', body: 'Una referencia para pensar en áreas comunes y espacios privados según tu familia.' },
-      { id: 'corredor', no: '03', title: 'Con corredor', tag: 'UNA ENTRADA ACOGEDORA', image: imageBase + 'casa-verga-3.webp', alt: 'Casa prefabricada de paneles verdes con ventanas blancas y cubierta metálica', body: 'Un espacio de entrada cubierto puede ser útil; confirma con el proveedor si está incluido.' }
+      { id: 'compacta', no: '01', title: 'La compacta', tag: 'SENCILLA Y FUNCIONAL', image: 'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2020/08/29/5f4b288cd7fd2.jpeg', alt: 'Casa prefabricada amarilla con cubierta roja y un pequeño corredor', body: 'Una idea para priorizar los espacios esenciales y una distribución práctica.' },
+      { id: 'familiar', no: '02', title: 'La familiar', tag: 'ESPACIO PARA COMPARTIR', image: 'https://www.sucasaprefabricada.com/wp-content/uploads/2016/01/88m.jpg', alt: 'Casa prefabricada blanca con cubierta roja y corredor al frente', body: 'Una referencia para pensar en áreas comunes y espacios privados según tu familia.' },
+      { id: 'corredor', no: '03', title: 'Con corredor', tag: 'UNA ENTRADA ACOGEDORA', image: 'https://www.minvivienda.gov.co/sites/default/files/noticias/270921_img1.jpg', alt: 'Casa prefabricada de paneles verdes con ventanas blancas y cubierta metálica', body: 'Un espacio de entrada cubierto puede ser útil; confirma con el proveedor si está incluido.' }
     ];
     let activeSlide = 0;
     const heroPhoto = document.querySelector('#heroPhoto');
@@ -241,7 +238,7 @@ const models = [
       document.querySelector('#detailBody').textContent = model.body;
       document.querySelector('#dialogPhoto').src = model.image;
       document.querySelector('#dialogPhoto').alt = model.alt;
-      document.querySelector('#dialogCaption').textContent = model.title + ' · Imagen generada de referencia';
+      document.querySelector('#dialogCaption').textContent = model.title + ' · Foto de referencia';
       const typeByModel = {
         compacta: 'Una casa compacta',
         familiar: 'Una casa para mi familia',
