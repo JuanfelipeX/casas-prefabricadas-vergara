@@ -74,3 +74,98 @@
   .hero-photo,.hero-copy,.model-image.visible{animation:none!important;transition:none!important}
   .topbar{transition:none!important}
 }
+
+/* AJUSTE DE LEGIBILIDAD: tipografía más grande, manteniendo el diseño */
+body{font-size:18px}
+.main-nav{font-size:15px}
+.nav-cta{font-size:14px}
+.menu-panel a{font-size:16px}
+.eyebrow{font-size:13px}
+.hero h1{font-size:clamp(68px,7.8vw,112px)}
+.hero-lead{font-size:19px;line-height:1.75}
+.button{font-size:15px}
+.quiet-link{font-size:15px}
+.hero-stamp b{font-size:12px}
+.hero-stamp small{font-size:13px}
+.hero-caption{font-size:10px}
+.slide-dot{font-size:12px}
+.section-heading h2,.config-heading h2{font-size:clamp(50px,5.8vw,78px)}
+.section-heading>p,.config-heading>p{font-size:17px}
+.tab-number{font-size:13px}
+.tab-copy small{font-size:11px}
+.tab-copy b{font-size:clamp(28px,2.4vw,38px)}
+.model-disclaimer{font-size:13px}
+.model-next{font-size:14px}
+.model-detail h3{font-size:clamp(42px,4.8vw,66px)}
+.model-detail>p:not(.detail-kicker){font-size:17px}
+.detail-kicker{font-size:11px}
+.image-counter{font-size:12px}
+.config-group legend{font-size:19px}
+.config-group legend span{font-size:14px}
+.choice-chip{font-size:15px}
+.summary-head{font-size:12px}
+.config-summary h3{font-size:39px}
+.summary-row>span{font-size:11px}
+.summary-row>b{font-size:16px}
+.summary-note{font-size:13px}
+.summary-cta{font-size:15px}
+.contact-copy h2{font-size:clamp(50px,6vw,82px)}
+.contact-copy>p:not(.eyebrow){font-size:17px}
+.contact-index{font-size:12px}
+.contact-panel h3{font-size:clamp(32px,3.2vw,42px)}
+.contact-panel>p{font-size:16px}
+.contact-footnote{font-size:12px}
+.footer>span,.footer>small{font-size:12px}
+.photo-dialog p{font-size:14px}
+
+@media(max-width:1020px){
+  .hero h1{font-size:clamp(62px,8vw,88px)}
+  .hero-lead{font-size:18px}
+  .section-heading h2,.config-heading h2{font-size:clamp(46px,6vw,68px)}
+  .tab-copy b{font-size:30px}
+}
+@media(max-width:700px){
+  body{font-size:16.5px}
+  .brand-words b{font-size:13px}
+  .brand-words small{font-size:7px}
+  .nav-cta{font-size:12px}
+  .menu-panel a{font-size:16px}
+  .eyebrow{font-size:10px}
+  .hero h1{font-size:clamp(48px,12.4vw,68px);line-height:1.02}
+  .hero-lead{font-size:17px;line-height:1.7}
+  .button{font-size:13px;padding:16px 17px}
+  .quiet-link{font-size:13px}
+  .hero-stamp b{font-size:9px}
+  .hero-stamp small{font-size:11px}
+  .hero-caption{font-size:8px}
+  .slide-dot span{font-size:11px}
+  .slide-arrow{width:35px;height:35px;font-size:14px}
+  .section-heading h2,.config-heading h2{font-size:clamp(42px,10.7vw,56px);line-height:1.04}
+  .section-heading>p,.config-heading>p{font-size:16px;line-height:1.75}
+  .tab-number{font-size:11px}
+  .tab-copy small{font-size:9px}
+  .tab-copy b{font-size:28px}
+  .model-disclaimer{font-size:11.5px}
+  .model-next{font-size:13px}
+  .model-detail h3{font-size:clamp(40px,10vw,48px)}
+  .model-detail>p:not(.detail-kicker){font-size:15px;line-height:1.7}
+  .detail-kicker{font-size:9px}
+  .image-counter{font-size:11px}
+  .config-group legend{font-size:16px;line-height:1.5}
+  .config-group legend span{font-size:12px}
+  .choice-chip{font-size:13px;padding:13px 14px}
+  .summary-head{font-size:10px}
+  .config-summary h3{font-size:31px}
+  .summary-row>span{font-size:10px}
+  .summary-row>b{font-size:14px}
+  .summary-note{font-size:11px}
+  .summary-cta{font-size:13px}
+  .contact-copy h2{font-size:clamp(42px,10.8vw,56px)}
+  .contact-copy>p:not(.eyebrow){font-size:16px;line-height:1.75}
+  .contact-index{font-size:11px}
+  .contact-panel h3{font-size:31px}
+  .contact-panel>p{font-size:15px}
+  .contact-footnote{font-size:10px}
+  .footer>span,.footer>small{font-size:10px}
+  .photo-dialog p{font-size:13px}
+}
